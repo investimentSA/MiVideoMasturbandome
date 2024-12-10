@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KPW82KF1E"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,17 +12,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Completa las instrucciones para ver el video</title>
+  <title>¡No te lo pierdas! Completa para acceder al video más esperado</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    /* Estilos personalizados */
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+    .header-text {
+      color: #333;
+      font-weight: bold;
+    }
     .video-container {
       position: relative;
       overflow: hidden;
       width: 100%;
-      height: auto;
       margin-bottom: 20px;
     }
     .video-container img {
@@ -36,37 +42,50 @@
       transform: translate(-50%, -50%);
       font-size: 60px;
       color: white;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.7);
       border-radius: 50%;
       padding: 20px;
       cursor: pointer;
     }
-    .country-section {
-      margin-top: 40px;
-    }
     .country-section img {
       width: 50px;
       height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
     }
     .country-section .btn {
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px;
       margin-top: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+    .country-section .btn:hover {
+      transform: scale(1.1);
+    }
+    .testimonial {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-
   <div class="container">
     <!-- Encabezado -->
     <div class="row mt-5 text-center">
-      <h1 class="col-12">¡Completa las instrucciones para ver el video protegido!</h1>
-      <p class="col-12">Selecciona tu país, completa la oferta y desbloquea el contenido exclusivo.</p>
+      <h1 class="col-12 header-text">¡Completa una oferta y desbloquea el video en vivo más exclusivo!</h1>
+      <p class="col-12">Miles ya lo han visto y no se arrepienten... ¿Qué esperas?</p>
     </div>
 
-    <!-- Video con imagen y botón de play falso -->
+    <!-- Video -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-8">
         <div class="video-container">
-          <img src="https://ei.phncdn.com/videos/202308/23/438011241/original/(m=eaSaaTbaAaaaa)(mh=Yk-OcIkWezIqHi5g)1.jpg" alt="Video de ejemplo">
+          <img src="https://ei.phncdn.com/videos/202308/23/438011241/original/(m=eaSaaTbaAaaaa)(mh=Yk-OcIkWezIqHi5g)1.jpg" alt="Video teaser">
           <div class="play-button">
             <i class="bi bi-play-circle"></i>
           </div>
@@ -74,7 +93,28 @@
       </div>
     </div>
 
-    <!-- Países -->
+    <!-- Testimonios -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2 class="text-center">Lo que dicen otros usuarios:</h2>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="testimonial">
+          <p>"¡Uff, ha merecido la pena completar la oferta para ver el directo! 😍"</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="testimonial">
+          <p>"Madre mía, uff, completaría 100 ofertas si hace falta para volverla a ver en directo."</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="testimonial">
+          <p>"¡Qué calores! Creía que no era verdad, pero está en su habitación en directo. ¡Qué bombón!"</p>
+        </div>
+      </div>
+    </div>
+ <!-- Países -->
     <div class="row country-section justify-content-center">
       <!-- España -->
       <div class="col-12 col-md-4 text-center">
@@ -141,15 +181,16 @@
       </div>
     </div>
 
+
     <!-- Nota -->
     <div class="row mt-5">
       <div class="col-12 text-center">
-        <p>Recuerda: Debes hacer clic desde el enlace de tu país. Si no lo haces, el video no se desbloqueará.</p>
+        <p>Recuerda: selecciona tu país y completa la oferta para desbloquear el contenido.</p>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap 5 y Scripts -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
