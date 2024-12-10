@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KPW82KF1E"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-0KPW82KF1E');
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>¡No te lo pierdas! Completa para acceder al video más esperado</title>
+  <title>Completa las instrucciones para ver el video</title>
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: Arial, sans-serif;
-    }
-    .header-text {
-      color: #333;
-      font-weight: bold;
-    }
+    /* Estilos personalizados */
     .video-container {
       position: relative;
       overflow: hidden;
       width: 100%;
+      height: auto;
       margin-bottom: 20px;
     }
     .video-container img {
@@ -42,94 +28,81 @@
       transform: translate(-50%, -50%);
       font-size: 60px;
       color: white;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.5);
       border-radius: 50%;
       padding: 20px;
       cursor: pointer;
     }
-    .country-section img {
-      width: 50px;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 10px;
+    .instruction {
+      margin-top: 20px;
     }
-    .country-section .btn {
-      font-size: 18px;
-      font-weight: bold;
-      padding: 15px;
-      margin-top: 10px;
-      transition: all 0.3s ease-in-out;
+    .instruction ul {
+      list-style-type: none;
+      padding-left: 0;
     }
-    .country-section .btn:hover {
-      transform: scale(1.1);
+    .instruction li {
+      margin: 10px 0;
+      font-size: 1.2rem;
     }
-    .testimonial {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 15px;
-      margin-bottom: 20px;
-      font-style: italic;
+    .btn-primary {
+      background-color: #28a745;
+      border-color: #28a745;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
     <!-- Encabezado -->
     <div class="row mt-5 text-center">
-      <h1 class="col-12 header-text">Contenido Protegido. Completa una breve encuesta y desbloquea el directo</h1>
-      <p class="col-12">mensaje del directo: Que mojadita estoy nene, me encanta que me miren, vienes a verme?</p>
+      <h1 class="col-12">¡Completa las instrucciones para ver el video!</h1>
+      <p class="col-12">Sigue estos simples pasos y disfruta del contenido exclusivo.</p>
     </div>
 
-    <!-- Video -->
+    <!-- Video con imagen y botón de play falso -->
     <div class="row justify-content-center">
       <div class="col-12 col-md-8">
         <div class="video-container">
-          <img src="https://ei.phncdn.com/videos/202308/23/438011241/original/(m=eaSaaTbaAaaaa)(mh=Yk-OcIkWezIqHi5g)1.jpg" alt="Video teaser">
-          <div class="play-button">
+          <img src="https://ei.phncdn.com/videos/202308/23/438011241/original/(m=eaSaaTbaAaaaa)(mh=Yk-OcIkWezIqHi5g)1.jpg" alt="Video de ejemplo">
+          <a href="https://superfolder.net/pauldev" class="play-button" target="_blank">
             <i class="bi bi-play-circle"></i>
-          </div>
+          </a>
         </div>
       </div>
     </div>
 
-    <!-- Testimonios -->
-    <div class="row mt-5">
-      <div class="col-12">
-        <h2 class="text-center">Comentarios en vivo:</h2>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="testimonial">
-          <p>Uff merece pasar por el enlace que hot me pones nena </p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="testimonial">
-          <p>q rico t tocas bebe</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="testimonial">
-          <p>Qué perra me encantas..</p>
-        </div>
+    <!-- Instrucciones -->
+    <div class="row justify-content-center instruction">
+      <div class="col-12 col-md-8">
+        <h3>Instrucciones para acceder al video:</h3>
+        <ul>
+          <li>1. Completa una breve encuesta.</li>
+          <li>2. Descarga un navegador recomendado.</li>
+          <li>3. Rellena el formulario del sorteo.</li>
+        </ul>
+        <p>Una vez que hayas completado todos los pasos, podrás acceder al contenido exclusivo. ¡No te lo pierdas!</p>
       </div>
     </div>
-<div class="col-12 col-md-4 text-center">
-        <p>Completa una breve encuesta para desbloquear el directo.</p>
-        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=55528" class="btn btn-primary btn-lg w-100" target="_blank">Ver el directo</a>
+
+    <!-- Llamado a la acción -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 text-center">
+        <a href="https://superfolder.net/pauldev" class="btn btn-primary btn-lg w-100" target="_blank">Sigue los pasos aquí</a>
       </div>
+    </div>
 
-
-    <!-- Nota -->
-    <div class="row mt-5">
+    <!-- Información adicional -->
+    <div class="row justify-content-center mt-5">
       <div class="col-12 text-center">
-        <p>Recuerda: para acceder gratis, completa una breve encuesta.</p>
+        <p>Al hacer clic, aceptas las condiciones de uso y privacidad del sitio.</p>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap 5 y íconos -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+
 </body>
 </html>
