@@ -2,14 +2,13 @@
 <html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KPW82KF1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KPW82KF1E');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KPW82KF1E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0KPW82KF1E');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -42,20 +41,15 @@
       padding: 20px;
       cursor: pointer;
     }
-    .instruction {
-      margin-top: 20px;
+    .country-section {
+      margin-top: 40px;
     }
-    .instruction ul {
-      list-style-type: none;
-      padding-left: 0;
+    .country-section img {
+      width: 50px;
+      height: auto;
     }
-    .instruction li {
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-    .btn-primary {
-      background-color: #28a745;
-      border-color: #28a745;
+    .country-section .btn {
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -65,7 +59,7 @@
     <!-- Encabezado -->
     <div class="row mt-5 text-center">
       <h1 class="col-12">¡Completa las instrucciones para ver el video protegido!</h1>
-      <p class="col-12">Sigue este simple paso y disfruta del contenido exclusivo.</p>
+      <p class="col-12">Selecciona tu país, completa la oferta y desbloquea el contenido exclusivo.</p>
     </div>
 
     <!-- Video con imagen y botón de play falso -->
@@ -73,45 +67,90 @@
       <div class="col-12 col-md-8">
         <div class="video-container">
           <img src="https://ei.phncdn.com/videos/202308/23/438011241/original/(m=eaSaaTbaAaaaa)(mh=Yk-OcIkWezIqHi5g)1.jpg" alt="Video de ejemplo">
-          <a href="https://superfolder.net/pauldev" class="play-button" target="_blank">
+          <div class="play-button">
             <i class="bi bi-play-circle"></i>
-          </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Instrucciones -->
-    <div class="row justify-content-center instruction">
-      <div class="col-12 col-md-8">
-        <h3>Instrucciones para acceder al video:</h3>
-        <ul>
-          <li>1. Completa una breve encuesta o rellena un breve formulario</li>
-        </ul>
-        <p>Una vez que hayas completado el paso, podrás acceder al contenido exclusivo. ¡No te lo pierdas!</p>
+    <!-- Países -->
+    <div class="row country-section justify-content-center">
+      <!-- España -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/es.png" alt="España">
+        <h4>España</h4>
+        <p>¡Consigue ya tu vale Temu de 200€!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=64972" class="btn btn-danger btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- México -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/mx.png" alt="México">
+        <h4>México</h4>
+        <p>¡Consigue tu vale para nevera de Coca Cola!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=62985" class="btn btn-success btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- Argentina -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/ar.png" alt="Argentina">
+        <h4>Argentina</h4>
+        <p>¡Puedes convertirte en millonario!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=54788" class="btn btn-primary btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- Colombia -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/co.png" alt="Colombia">
+        <h4>Colombia</h4>
+        <p>¡Obtenga los últimos productos de Coca Cola ahora!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=66050" class="btn btn-warning btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- Perú -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/pe.png" alt="Perú">
+        <h4>Perú</h4>
+        <p>¡Obtenga una recompensa después de esta encuesta!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=59621" class="btn btn-info btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- Venezuela -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/ve.png" alt="Venezuela">
+        <h4>Venezuela</h4>
+        <p>¡Obtenga una recompensa después de esta encuesta!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=62106" class="btn btn-secondary btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- Estados Unidos -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/us.png" alt="Estados Unidos">
+        <h4>Estados Unidos</h4>
+        <p>You can get a $750 Temu Gift Card Now!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=67722" class="btn btn-dark btn-lg w-100" target="_blank">Access Here</a>
+      </div>
+      <!-- Chile -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/cl.png" alt="Chile">
+        <h4>Chile</h4>
+        <p>¡Entra por un Samsung A53!</p>
+        <a href="https://trkfiles.com/show.php?l=0&u=173518&id=56779" class="btn btn-danger btn-lg w-100" target="_blank">Accede aquí</a>
+      </div>
+      <!-- Otros países -->
+      <div class="col-12 col-md-4 text-center">
+        <img src="https://flagcdn.com/w320/un.png" alt="Global">
+        <h4>Otros Países</h4>
+        <p>Completa una breve encuesta para desbloquear el video.</p>
+        <a href="https://superfolder.net/pauldev" class="btn btn-primary btn-lg w-100" target="_blank">Accede aquí</a>
       </div>
     </div>
 
-    <!-- Llamado a la acción -->
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-6 text-center">
-        <a href="https://superfolder.net/pauldev" class="btn btn-primary btn-lg w-100" target="_blank">Sigue los pasos aquí</a>
-      </div>
-    </div>
-
-    <!-- Información adicional -->
-    <div class="row justify-content-center mt-5">
+    <!-- Nota -->
+    <div class="row mt-5">
       <div class="col-12 text-center">
-        <p>Al hacer clic, aceptas las condiciones de uso y privacidad del sitio.</p>
+        <p>Recuerda: Debes hacer clic desde el enlace de tu país. Si no lo haces, el video no se desbloqueará.</p>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap 5 y íconos -->
+  <!-- Bootstrap 5 y Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
-
 </body>
 </html>
-
-
