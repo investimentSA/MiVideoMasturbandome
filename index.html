@@ -1,134 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KPW82KF1E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KPW82KF1E');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Restringido</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="description" content="Directo exclusivo. Completa una breve encuesta para ver el video completo.">
+  <title>Directo Exclusivo</title>
   <style>
-    body, html {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #000;
+      background-color: #000;
+      overflow: hidden; /* Elimina el scroll */
     }
     .video-container {
-      position: relative;
-      width: 100%;
-      height: 100vh; /* Pantalla completa */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      background: #000;
     }
-    .video-container iframe {
+    iframe {
       width: 100%;
       height: 100%;
-      max-width: 1920px;
-      max-height: 1080px;
       border: none;
+      pointer-events: none; /* Evita interacción con el video */
     }
-    .modal-content {
-      text-align: center;
-    }
-    .modal-content h5 {
-      margin-bottom: 1rem;
-    }
-    .btn-primary {
-      background-color: #ff4f44; /* Color llamativo */
-      border: none;
-      font-size: 1.5rem;
-      padding: 15px 30px;
-      border-radius: 10px;
-    }
-    .urgent-text {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: red;
-    }
-    /* Estilo para un banner flotante */
-    .floating-banner {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      background: #007bff;
-      padding: 15px;
-      border-radius: 10px;
+    /* Overlay de aviso */
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
       color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      border-radius: 10px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .overlay h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .overlay p {
       font-size: 1rem;
-      display: none;
+      margin-bottom: 20px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: red;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      transition: background 0.3s ease-in-out;
+    }
+    .cta-btn:hover {
+      background: darkred;
     }
   </style>
 </head>
 <body>
 
-<div class="video-container">
-  <iframe 
-    id="vimeoPlayer"
-    src="https://player.vimeo.com/video/1038714486?badge=0&autopause=0&player_id=0&app_id=58479&background=1&controls=0" 
-    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-    title="Video Restringido">
-  </iframe>
-</div>
+  <!-- Video Container -->
+  <div class="video-container">
+    <!-- Iframe con el video de Mega (modificado para ocultar controles) -->
+    <iframe 
+      id="videoIframe"
+      width="640" 
+      height="360" 
+      frameborder="0" 
+      src="https://mega.nz/embed/dfMBUJLS#JyrI7a3Iafxb7tVO5QARhUFaWx6eBM3PWQ8MUaENYS0" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen>
+    </iframe>
 
-<!-- Modal -->
-<div class="modal fade" id="cpaModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">¡Acción requerida para continuar!</h5>
-      </div>
-      <div class="modal-body">
-        <p class="urgent-text">¡Actúa rápido para no perderte el directo!</p>
-        <p>Para seguir viendo el Directo, completa una breve encuesta o rellena un formulario!</p>
-        <a href="https://superfolder.net/pauldev" target="_blank" class="btn btn-primary">Completar y Ver el Directo</a>
-      </div>
+    <!-- Overlay con mensaje -->
+    <div class="overlay" id="overlay">
+      <h1>¡Atención! Contenido Exclusivo</h1>
+      <p>Este video está restringido para mayores de 18 años. Completa una breve encuesta para seguir viendo el directo.</p>
+      <a href="https://eradictrkr.com/pauldev" class="cta-btn" target="_blank">Completar Encuesta y Ver el Directo</a>
     </div>
   </div>
-</div>
 
-<!-- Banner flotante -->
-<div class="floating-banner" id="floatingBanner">
-  <p>¡Solo queda 1 minuto para completar la encuesta y acceder al directo!</p>
-  <a href="https://superfolder.net/pauldev" target="_blank" class="btn btn-primary">¡Accede al Directo AHORA!</a>
-</div>
+  <!-- JavaScript para manejar el video y el overlay -->
+  <script>
+    const overlay = document.getElementById('overlay');
+    const iframe = document.getElementById('videoIframe');
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const iframe = document.getElementById('vimeoPlayer');
-    const player = new Vimeo.Player(iframe);
-    let modalShown = false;
-    
-    // Mostrar banner de urgencia después de 15 segundos
-    setTimeout(() => {
-      document.getElementById('floatingBanner').style.display = 'block';
-    }, 15000);
+    // Función para iniciar el video automáticamente
+    function startVideo() {
+      setTimeout(() => {
+        // Reproducir el video automáticamente
+        iframe.src = "https://mega.nz/embed/dfMBUJLS#JyrI7a3Iafxb7tVO5QARhUFaWx6eBM3PWQ8MUaENYS0";
+      }, 0);  // Comienza inmediatamente
+    }
 
-    // Detectar 20 segundos de reproducción
-    player.on('timeupdate', function(data) {
-      if (!modalShown && data.seconds >= 20) {
-        player.pause().then(() => {
-          const modal = new bootstrap.Modal(document.getElementById('cpaModal'), {
-            backdrop: 'static', // Evitar cierre al hacer clic fuera
-            keyboard: false    // Evitar cierre con teclado
-          });
-          modal.show();
-          modalShown = true;
-        });
-      }
-    });
-  });
-</script>
+    // Función para mostrar el overlay después de 5 segundos
+    function showOverlay() {
+      setTimeout(() => {
+        overlay.classList.add('show');
+      }, 5000);  // Mostrar el overlay a los 5 segundos
+    }
+
+    // Iniciar las funciones
+    startVideo();
+    showOverlay();
+  </script>
 
 </body>
 </html>
+
+
+
+
